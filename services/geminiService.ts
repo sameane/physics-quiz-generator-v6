@@ -3,7 +3,7 @@ import { GoogleGenAI, Type, GenerateContentResponse } from "@google/genai";
 import { ExamData, GenerationParams, Question } from "../types";
 
 // Dynamic API Key Handling
-let dynamicApiKey = process.env.API_KEY || '';
+let dynamicApiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
 
 export const setApiKey = (key: string) => {
   dynamicApiKey = key;
